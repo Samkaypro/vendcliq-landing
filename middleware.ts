@@ -1,11 +1,11 @@
-export { auth as middleware } from "auth"
+import NextAuth from "next-auth"
+import authConfig from "./auth.config"
 
-// Or like this if you need to do something here.
-// export default auth((req) => {
-//   console.log(req.auth) //  { session: { user: { ... } } }
-// })
+export const { auth: middleware } = NextAuth(authConfig)
 
-// Read more: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    // Exclude static files and API routes
+    "/((?!api|_next/static|_next/image|assets|favicon.ico).*)",
+  ],
 }
