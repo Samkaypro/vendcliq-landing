@@ -111,7 +111,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               <Link href="/terms" className="hover:opacity-100">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="hover:opacity-100">
+              <Link href="#" className="hover:opacity-100">
                 Cookies Settings
               </Link>
             </div>

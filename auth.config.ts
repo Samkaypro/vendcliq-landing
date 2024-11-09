@@ -17,7 +17,7 @@ export default {
     }),
     Resend({
       apiKey: env.RESEND_API_KEY,
-      from: "Vendcliq <Vendcliq@Vendcliq.com>",
+      from: "Next Template App <onboarding@resend.dev>",
     }),
   ],
 } satisfies NextAuthConfig;

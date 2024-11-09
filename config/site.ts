@@ -42,7 +42,7 @@ export const footerLinks: SidebarNavItem[] = [
         icon: ""
       },
       {
-        title: "Partnership", href: "/partnership",
+        title: "Partnership", href: "#",
         icon: ""
       },
     ],
@@ -55,15 +55,15 @@ export const footerLinks: SidebarNavItem[] = [
         icon: ""
       },
       {
-        title: "FAQs", href: "/faqs",
+        title: "FAQs", href: "#",
         icon: ""
       },
       {
-        title: "Help Center", href: "/help-center",
+        title: "Help Center", href: "#",
         icon: ""
       },
       {
-        title: "Testimonials", href: "/testimonials",
+        title: "Testimonials", href: "#",
         icon: ""
       },
     ],
