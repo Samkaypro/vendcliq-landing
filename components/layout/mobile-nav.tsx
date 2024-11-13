@@ -66,12 +66,12 @@ export function NavMobile() {
 
           <li className="py-3">
             <div className="flex gap-4">
-              <Link href="">
+              <Link href="https://app.vendcliq.com">
                 <Button className="gap-2 px-4" variant="outline" size="sm" rounded="xl">
                   <span>Login</span>
                 </Button>
               </Link>
-              <Link href="">
+              <Link href="https://app.vendcliq.com/signup">
                 <Button
                   style={{ backgroundColor: "#FFC300", color: "black" }}
                   className="gap-2 px-4"

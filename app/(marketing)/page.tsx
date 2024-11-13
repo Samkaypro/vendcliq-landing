@@ -1,17 +1,17 @@
 import HeroLanding from "@/components/sections/hero-landing";
-import PreviewLanding from "@/components/sections/preview-landing";
-import Gettoknowus from "@/components/sections/get-to-know-us"
-import Whyvendcliq from "@/components/sections/why-vendcliq"
-import Testimonial from "@/components/sections/testimonials"
+import About from "@/components/sections/home/home-about";
+import Features from "@/components/sections/home/home-features";
+import Hometestimonials from "@/components/sections/home/home-testimonials";
+
 
 export default function IndexPage() {
   return (
     <>
       <HeroLanding /> 
-      <PreviewLanding />
-      <Gettoknowus />
-      <Whyvendcliq />
-      <Testimonial />
+      <About />
+      <Hometestimonials />
+      <Features />
+     
     </>
   );
 }

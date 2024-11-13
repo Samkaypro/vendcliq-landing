@@ -8,53 +8,54 @@ import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { footerLinks, siteConfig } from "@/config/site"
+import FooterLogo from "@/public/_static/images/Veralogo-fot.png"
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className="w-full">
       {/* Newsletter Section */}
       <div className="relative py-16">
-  {/* Top background half */}
-  <div className="absolute inset-0 h-1/2 bg-[#A3B4F640]"></div>
-  
-  {/* Bottom background half */}
-  <div className="absolute inset-0 top-1/2 h-1/2 bg-[#4052A3]"></div>
-  
-  {/* Content container */}
-  <div className="relative mx-auto max-w-6xl rounded-3xl border-[6px] border-[#CCD5F9] bg-white p-12 text-center shadow-sm">
-    <div className="mx-auto mb-8 w-24">
-      <Image
-        src="/placeholder.svg"
-        alt="Vendcliq Logo"
-        width={96}
-        height={96}
-        className="h-auto w-full"
-      />
-    </div>
-    <div className="mb-8 text-3xl font-bold">
-      <span className="inline-block  bg-[#A3B4F640] px-6 py-2 ">
-        Vendcliq
-      </span>
-      Newsletter: Elevate Your Shop Now
-    </div>
-    <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
-      Get weekly tips, market insights, and AI-powered strategies to optimize your inventory and boost sales.
-    </p>
-    <form className="mx-auto flex max-w-md gap-2">
-      <Input
-        type="email"
-        placeholder="Email address"
-        className="border-[#CCD5F9] bg-white"
-      />
-      <Button
-  style={{ backgroundColor: '#FFC300', color: 'black' }}
-  className="flex items-center justify-center hover:bg-[#FFC300]/90"
->
-  Start now
-</Button>
-    </form>
-  </div>
-</div>
+        {/* Top background half */}
+        <div className="absolute inset-0 h-1/2 bg-[#A3B4F640]"></div>
+
+        {/* Bottom background half */}
+        <div className="absolute inset-0 top-1/2 h-1/2 bg-[#4052A3]"></div>
+
+        {/* Content container */}
+        <div className="relative mx-auto max-w-6xl rounded-3xl border-[6px] border-[#CCD5F9] bg-white p-12 text-center shadow-sm">
+          <div className="mx-auto mb-8 w-24">
+            <Image
+              src={FooterLogo}
+              alt="Vendcliq Logo"
+              width={96}
+              height={96}
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mb-8 text-3xl font-bold">
+            <span className="inline-block  bg-[#A3B4F640] px-6 py-2 ">
+              Vendcliq
+            </span>
+            Newsletter: Elevate Your Shop Now
+          </div>
+          <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
+            Get weekly tips, market insights, and AI-powered strategies to optimize your inventory and boost sales.
+          </p>
+          <form className="mx-auto flex max-w-md gap-2">
+            <Input
+              type="email"
+              placeholder="Email address"
+              className="border-[#CCD5F9] bg-white"
+            />
+            <Button
+              style={{ backgroundColor: '#FFC300', color: 'black' }}
+              className="flex items-center justify-center hover:bg-[#FFC300]/90"
+            >
+              Start now
+            </Button>
+          </form>
+        </div>
+      </div>
 
       {/* Main Footer */}
       <div style={{ backgroundColor: '#4052A3' }} className="text-white">
@@ -62,7 +63,16 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
             {/* Logo and Description */}
             <div className="space-y-4">
-              <div className="size-8 bg-white" /> {/* Logo placeholder */}
+              <div className="mb-8 w-24">
+                <Image
+                  src={FooterLogo}
+                  alt="Vendcliq Logo"
+                  width={96}
+                  height={96}
+                  className="h-auto w-full"
+                />
+              </div>
+              {/* Logo placeholder */}
               <p className="text-sm opacity-80">
                 Vera Africa: Building a network of thriving distributors through innovative technology and community support.
               </p>

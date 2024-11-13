@@ -2,9 +2,9 @@ import landingPreview from "@/public/_static/images/landing-preview.png"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-export default function Component() {
+export default function HeroLanding() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white">
+    <div className="relative min-h-screen max-w-screen-xl overflow-hidden bg-white">
       <div className="container relative mx-auto grid min-h-screen gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
         {/* Left Column with Grid Background */}
         <div className="relative space-y-8">

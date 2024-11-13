@@ -1,9 +1,14 @@
+import { NavBar } from "@/components/layout/navbar";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { NavMobile } from "@/components/layout/mobile-nav";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
+      <NavMobile />
+      <NavBar scroll={true} />
       <h1 className="text-6xl font-bold">404</h1>
       <Image
         src="/_static/illustrations/rocket-crashed.svg"
@@ -16,12 +21,13 @@ export default function NotFound() {
         Page not found. Back to{" "}
         <Link
           href="/"
-          className="text-muted-foreground underline underline-offset-4 hover:text-blue-500"
+          className="text-[#F8BD00] underline underline-offset-4 "
         >
           Homepage
         </Link>
         .
       </p>
+      <SiteFooter />
     </div>
   );
 }

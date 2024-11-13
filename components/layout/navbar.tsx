@@ -64,12 +64,12 @@ export function NavBar({ scroll = false }: NavBarProps) {
         ) : null}
 
         <div className="flex items-center space-x-3">
-          <Link href="" className="hidden md:block">
+          <Link href="https://app.vendcliq.com" className="hidden md:block">
             <Button className="gap-2 px-4" variant="outline" size="sm" rounded="xl">
               <span>Login</span>
             </Button>
           </Link>
-          <Link href="" className="hidden md:block">
+          <Link href="https://app.vendcliq.com/signup" className="hidden md:block">
             <Button
               style={{ backgroundColor: "#FFC300", color: "black" }}
               className="gap-2 px-4"

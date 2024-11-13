@@ -53,18 +53,21 @@ export default function Component() {
   return (
     <section className="py-16 md:py-24">
       <div className="container">
-        <div className="mb-16 flex flex-col items-center text-center">
-          <Button
-            variant="outline"
-            className="mb-8 border-[#4052A3] text-[#4052A3]"
-          >
-            Testimonials
-          </Button>
-          <h2 className="text-4xl font-bold text-[#4052A3] md:text-5xl">
-            Vendcliq Success Stories
+      <section className="py-16 text-center">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <span className="text-[#4052A3]">See How </span>
+            <span className="text-[#FFC300]">Vendcliq</span>
+            <span className="text-[#4052A3]"> is Helping Vendors Thrive</span>
+          </h1>
+          <h2 className="mb-6 text-3xl font-bold text-[#4052A3] md:text-4xl lg:text-5xl">
+            Real Results, Real Stories
           </h2>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            See How Vendcliq is Helping Vendors Thrive
+          </p>
         </div>
-
+      </section>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <Card 
@@ -87,7 +90,7 @@ export default function Component() {
                 <p className="mb-4 text-muted-foreground">
                   {testimonial.quote}
                 </p>
-                <button className="flex items-center gap-2 text-sm text-[#4052A3] hover:opacity-80">
+                {/* <button className="flex items-center gap-2 text-sm text-[#4052A3] hover:opacity-80">
                   <span>Hear Their Stories</span>
                   <div className="flex items-center gap-2">
                     <Play className="size-3 fill-current" />
@@ -103,7 +106,7 @@ export default function Component() {
                       />
                     </svg>
                   </div>
-                </button>
+                </button> */}
               </CardContent>
             </Card>
           ))}
