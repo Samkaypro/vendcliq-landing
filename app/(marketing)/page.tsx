@@ -1,4 +1,4 @@
-import HeroLanding from "@/components/sections/hero-landing";
+import HeroLanding from "@/components/sections/home/hero-landing";
 import About from "@/components/sections/home/home-about";
 import Features from "@/components/sections/home/home-features";
 import Hometestimonials from "@/components/sections/home/home-testimonials";

@@ -26,41 +26,7 @@ const features = [
 export default function Features() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="bg-[#001F3F] px-4 py-24 text-white">
-        <div className="container mx-auto">
-          <div className="mb-16 flex justify-center">
-            <Button
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
-            >
-              Terms and Conditions
-            </Button>
-          </div>
 
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-              Transform Your Business: Join Thousands of Successful Vendors Today!
-            </h1>
-            <p className="mb-12 text-lg opacity-80">
-              Join the ranks of thousands of successful vendors who are transforming their businesses with Vendcliq. 
-              Our platform is designed to provide everything you need to grow smarter and faster—whether it&apos;s 
-              gaining access to flexible credit, streamlining inventory with real-time management, or connecting with 
-              trusted suppliers for unbeatable deals. Vendcliq empowers you with tools and resources to overcome 
-              challenges, reduce operational costs, and maximize profitability. By leveraging our easy-to-use features, 
-              you&apos;ll unlock new opportunities for expansion and improve efficiency.
-            </p>
-            <Link href="https://app.vendcliq.com/signup" >
-            <Button 
-              size="lg"
-              className="bg-[#FFC300] text-black hover:bg-[#FFC300]/90"
-            >
-              Apply Now and Transform Your Business!
-            </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section className="container mx-auto max-w-screen-xl px-4 py-24">
