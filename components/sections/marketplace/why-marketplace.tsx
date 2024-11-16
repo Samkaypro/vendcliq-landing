@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ShoppingBag, Clock, Users } from 'lucide-react'
 import Image from "next/image"
@@ -34,7 +34,18 @@ const features: Feature[] = [
 ]
 
 export default function MarketplaceSection() {
-  const [selectedFeature, setSelectedFeature] = useState<Feature>(features[0])
+  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(0)
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
+    }, 2500)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const selectedFeature = features[selectedFeatureIndex]
 
   return (
     <section className="relative overflow-hidden bg-[#4052A3] px-6 py-24 text-white">
@@ -54,7 +65,7 @@ export default function MarketplaceSection() {
           <p className="max-w-3xl text-lg opacity-80">
             Discover unbeatable deals, reliable suppliers, and tools to keep your business stocked and
             competitive. Access trusted suppliers, exclusive deals, and live bidding—all designed to help your
-            business thrive
+            business thrive.
           </p>
         </div>
 
@@ -62,12 +73,12 @@ export default function MarketplaceSection() {
         <div className="grid gap-8 lg:grid-cols-[300px,1fr]">
           {/* Feature Selection */}
           <div className="rounded-2xl bg-[#2A3D7A] p-4">
-            {features.map((feature) => (
+            {features.map((feature, index) => (
               <button
                 key={feature.id}
-                onClick={() => setSelectedFeature(feature)}
+                onClick={() => setSelectedFeatureIndex(index)}
                 className={`flex w-full items-center gap-4 rounded-xl p-4 text-left transition-colors ${
-                  selectedFeature.id === feature.id
+                  selectedFeatureIndex === index
                     ? "bg-[#4052A3]"
                     : "hover:bg-[#4052A3]/50"
                 }`}

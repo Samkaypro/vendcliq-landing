@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import Link from "next/link";
+import Image from "next/image"
 import { useSelectedLayoutSegment } from "next/navigation";
 import { useSession } from "next-auth/react";
 
@@ -14,7 +15,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ModalContext } from "@/components/modals/providers";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
-
+import HeaderLogo1 from "@/public/_static/logos/VendCliq-Secondary1.png"
 interface NavBarProps {
   scroll?: boolean;
   large?: boolean;
@@ -36,9 +37,13 @@ export function NavBar({ scroll = false }: NavBarProps) {
       <MaxWidthWrapper className="flex h-14 items-center justify-between py-4">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-1.5">
-            <span className="font-satoshi text-xl font-bold">
-              {siteConfig.name}
-            </span>
+          <Image
+              src={HeaderLogo1}
+              alt="Vendcliq Logo"
+              width={96}
+              height={96}
+              className="h-auto w-full"
+            />
           </Link>
         </div>
 

@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Grid, FileText, CreditCard, Gift } from 'lucide-react'
+import { Grid, FileText, CreditCard } from 'lucide-react'
 import Image from "next/image"
 
 interface Feature {
@@ -38,7 +38,17 @@ const features: Feature[] = [
 ]
 
 export default function WhyLoans() {
-  const [selectedFeature, setSelectedFeature] = useState<Feature>(features[0])
+  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
+    }, 2500)
+
+    return () => clearInterval(interval) // Cleanup on unmount
+  }, [])
+
+  const selectedFeature = features[selectedFeatureIndex]
 
   return (
     <section className="relative overflow-hidden bg-[#4052A3] px-6 py-24 text-white">
@@ -49,13 +59,15 @@ export default function WhyLoans() {
             variant="outline"
             className="mb-8 border-white/20 text-white hover:bg-white/10"
           >
-            Why Vendcliq Lons?
+            Why Vendcliq Loans?
           </Button>
           <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-          Why Choose Vendcliq Loans?
+            Why Choose Vendcliq Loans?
           </h1>
           <p className="max-w-2xl text-lg opacity-80">
-          Our loan service provides businesses with access to up to 50 million naira in credit, enabling you to secure the funding necessary for growth and expansion. With flexible repayment terms and small, manageable installments that align with your business cash flow.
+            Our loan service provides businesses with access to up to 50 million naira in credit,
+            enabling you to secure the funding necessary for growth and expansion. With flexible
+            repayment terms and small, manageable installments that align with your business cash flow.
           </p>
         </div>
 
@@ -63,12 +75,12 @@ export default function WhyLoans() {
         <div className="grid gap-8 lg:grid-cols-[300px,1fr]">
           {/* Feature Selection */}
           <div className="rounded-2xl bg-[#2A3D7A] p-4">
-            {features.map((feature) => (
+            {features.map((feature, index) => (
               <button
                 key={feature.id}
-                onClick={() => setSelectedFeature(feature)}
+                onClick={() => setSelectedFeatureIndex(index)}
                 className={`flex w-full items-center gap-4 rounded-xl p-4 text-left transition-colors ${
-                  selectedFeature.id === feature.id
+                  selectedFeatureIndex === index
                     ? "bg-[#4052A3]"
                     : "hover:bg-[#4052A3]/50"
                 }`}

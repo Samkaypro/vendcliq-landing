@@ -95,7 +95,7 @@ export default function About() {
               </div>
 
               {/* Image */}
-              <div className={`relative ${
+              <div className={`relative px-2 ${
                 resource.imagePosition === 'right' ? 'lg:order-last' : 'lg:order-first'
               }`}>
                 <div className="relative">

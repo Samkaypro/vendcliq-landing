@@ -8,8 +8,8 @@ import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { footerLinks, siteConfig } from "@/config/site"
-import FooterLogo from "@/public/_static/images/Veralogo-fot.png"
-
+import FooterLogo from "@/public/_static/logos/VendCliq-Secondary.png"
+import FooterLogo1 from "@/public/_static/logos/VendCliq-Secondary1.png"
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className="w-full">
@@ -25,7 +25,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         <div className="relative mx-auto max-w-6xl rounded-3xl border-[6px] border-[#CCD5F9] bg-white p-12 text-center shadow-sm">
           <div className="mx-auto mb-8 w-24">
             <Image
-              src={FooterLogo}
+              src={FooterLogo1}
               alt="Vendcliq Logo"
               width={96}
               height={96}
@@ -49,9 +49,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             />
             <Button
               style={{ backgroundColor: '#FFC300', color: 'black' }}
-              className="flex items-center justify-center hover:bg-[#FFC300]/90"
+              className="  hover:bg-[#FFC300]/90"
             >
-              Start now
+              Subscribe
             </Button>
           </form>
         </div>

@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroLanding() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white px-6 py-12 lg:px-8 lg:py-24">
+    <section className="relative overflow-hidden bg-white px-3 py-6 lg:px-8 lg:py-16">
      {/* Left Grid */}
      <div className="pointer-events-none absolute inset-0">
-     <div className="absolute left-0 " >
+     <div className="absolute bottom-1 left-0 hidden lg:block " >
           <svg
             width={700}
             height={900}
@@ -43,26 +43,31 @@ export default function HeroLanding() {
       <div className="mx-auto max-w-7xl">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           {/* Content */}
-          <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
+          <div className="relative z-10 mx-auto max-w-2xl text-center lg:col-span-7 lg:max-w-none lg:pt-6 lg:text-left xl:col-span-6">
              {/* Accent Circles */}
         <div className="absolute -left-4 -top-4 size-8 rounded-full bg-[#4052A3]" />
         <div className="absolute right-12 top-12 size-8 rounded-full bg-[#FFC300]" />
 
             <h1 className="text-4xl font-bold tracking-tight text-[#4052A3] sm:text-6xl">
-              Your Partner for Growth in the Beverage Business
+              Your Partner for <br></br>
+              <span className="inline-block rounded-lg bg-[#EEF0FF] p-1">
+              Growth
+            </span>{' '}
+              
+               in the <br></br>Beverage Business
             </h1>
-            <div className="mt-6 text-xl font-semibold text-[#4052A3]">
-              <span className="relative inline-block">
+            <div className="mt-6 text-3xl font-semibold text-[#4052A3]">
+              <span className="relative inline-block bg-[#EEF0FF]">
                 Stock. Connect. Grow.
-                <span className="absolute inset-x-0 bottom-0 h-3 bg-yellow-300 opacity-50" />
+                {/* <span className="absolute inset-x-0 bottom-0 h-3 bg-yellow-300 opacity-50" /> */}
               </span>
             </div>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-sm text-gray-600">
               Vendcliq is your one-stop platform for credit, trusted suppliers, and inventory
               tools to help your business thrive. Access tools, financing, and insights that
               empower you to reach new heights.
             </p>
-            <div className="mt-8 flex gap-x-6">
+            <div className="mt-6 flex justify-center lg:mt-8 lg:justify-start">
               <Button size="lg" className="bg-[#FFC300] text-black hover:bg-[#FFC300]/90">
                 Get Started with Vendcliq
               </Button>
@@ -73,28 +78,15 @@ export default function HeroLanding() {
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
             <div className="relative aspect-[4/3]  ">
               <Image
-                src="/_static/images/landing-preview.png"
+                src="/_static/images/home-landing.png"
                 alt="Happy beverage store owner"
-                width={550}
-                height={800}
+                width={1000}
+                height={1500}
                 className="absolute inset-0 "
+                priority
               />
-              {/* Notification overlays */}
-              <svg
-      width={551}
-      height={800}
-      viewBox="0 0 751 878"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-     
-    >
-      <path
-        d="M1 1.82h748.377V877H223.771C100.738 877 1 777.262 1 654.23V1.82z"
-        stroke="#F48C06"
-        strokeWidth={2}
-      />
-    </svg>
-              <div className="absolute left-4 top-4 rounded-lg bg-white/80 p-4 backdrop-blur-sm">
+            
+              {/* <div className="absolute left-4 top-4 rounded-lg bg-white/80 p-4 backdrop-blur-sm">
                 <div className="flex items-center gap-3">
                   <div className="size-10 rounded-full bg-blue-500" />
                   <div>
@@ -131,7 +123,7 @@ export default function HeroLanding() {
                     <p className="text-sm text-gray-500">Your bid is now accepted</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
