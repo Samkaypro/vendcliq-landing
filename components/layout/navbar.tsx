@@ -74,7 +74,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
               <span>Login</span>
             </Button>
           </Link>
-          <Link href="https://app.vendcliq.com/signup" className="hidden md:block">
+          <Link href="https://app.vendcliq.com/signup?step=1?step=1" className="hidden md:block">
             <Button
               style={{ backgroundColor: "#FFC300", color: "black" }}
               className="gap-2 px-4"

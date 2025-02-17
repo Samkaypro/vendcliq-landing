@@ -62,7 +62,7 @@ export default function Features() {
           </div>
 
           <div className="mt-16 flex justify-center">
-            <Link href="https://app.vendcliq.com/signup" >
+            <Link href="https://app.vendcliq.com/signup?step=1" >
             <Button 
               size="lg"
               className="bg-[#FFC300] text-black hover:bg-[#FFC300]/90"

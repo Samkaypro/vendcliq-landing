@@ -50,7 +50,7 @@ export default function Features() {
               challenges, reduce operational costs, and maximize profitability. By leveraging our easy-to-use features, 
               you&apos;ll unlock new opportunities for expansion and improve efficiency.
             </p>
-            <Link href="https://app.vendcliq.com/signup" >
+            <Link href="https://app.vendcliq.com/signup?step=1" >
             <Button 
               size="lg"
               className="bg-[#FFC300] text-black hover:bg-[#FFC300]/90"
@@ -96,7 +96,7 @@ export default function Features() {
           </div>
 
           <div className="mt-16 flex justify-center">
-            <Link href="https://app.vendcliq.com/signup" >
+            <Link href="https://app.vendcliq.com/signup?step=1" >
             <Button 
               size="lg"
               className="bg-[#FFC300] text-black hover:bg-[#FFC300]/90"

@@ -41,7 +41,7 @@ export default function About() {
     <div className="w-full ">
         <section className="py-16 text-center">
         <div className="container mx-auto px-4">
-          <Link href="https://app.vendcliq.com/signup">
+          <Link href="https://app.vendcliq.com/signup?step=1?step=1">
           <Button
             variant="outline"
             className="mb-12 border-[#4052A3] text-[#4052A3] hover:bg-[#4052A3]/10"

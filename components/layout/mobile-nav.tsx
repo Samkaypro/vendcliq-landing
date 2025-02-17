@@ -71,7 +71,7 @@ export function NavMobile() {
                   <span>Login</span>
                 </Button>
               </Link>
-              <Link href="https://app.vendcliq.com/signup">
+              <Link href="https://app.vendcliq.com/signup?step=1?step=1">
                 <Button
                   style={{ backgroundColor: "#FFC300", color: "black" }}
                   className="gap-2 px-4"
